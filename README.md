@@ -34,10 +34,10 @@ This tool relies on a number of open frameworks, mainly 960gs grid system & Amir
 
 ----
 ![Tool Outline](https://github.com/MXAYMxF/ADATBOOKSEARCH/blob/master/code/img/ADATool.jpg)
-### jQuery Functions on page: 
+## jQuery functions: 
 This outlines the jQuery functions, key conditions and variables that were used to make this thing possible. 
 
-###JQuery used functions & APIs
+##JQuery used functions & APIs
 - `$.click()`	:	click event of `'Qbtn'` button that starts the process
 - `$.keyup()`	:	to respond to the `'return'` key when entering using the keyboard - it hits 'click' of `'Qbtn'`
 - `$.each()`	:	while loop to iterate the lists `<li>` 
@@ -49,16 +49,16 @@ This outlines the jQuery functions, key conditions and variables that were used 
 - `$.attr()`	: 	to modify and/or find the attributes of `<li>` and `<a>` tags; e.g. `'href'` attribute
 - `$.replace()`	:	to replace the keywords with `'Q'` value
 
-###Conditions
+##Conditions
 - `$('a[href*="+temp+"]')`	:	find condition where attribute equals `temp`
 - `$('li > :checked + a')`	: 	find condition of anchor tags `<a>` within a list `<li>` with only `:checked` inputs
 
-###JavaScript
+##JavaScript
 - `decodeURI()`	: 	method to decode Unicode uri into %20 characters
 - `decodeURIComponent()`	:	same
 - `encodeURI()	`:
 
-###Variables & Acronyms
+##Variables & Acronyms
 - `'Q'`	:	is the input where the user's Query will go
 - `'Qbtn'`	: is the button that the user clicks to start processing the input query
 
