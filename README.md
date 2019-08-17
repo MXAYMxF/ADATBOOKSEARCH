@@ -3,7 +3,7 @@ ADAT BOOK SEARCH
 
 Created by @MRMMHD. See the official github site for more info.
 
-Unzip the file structure into your folders and you will be able to use the tool immediately. To edit the html, open index.html and to edit the styles use your favorite browser's inspector to identify the css style sheet where the selector you want to modify is.
+Unzip the file structure into your folders and you will be able to use the tool immediately. 
 
 ----------------------------------------------------------------------------
 
@@ -18,11 +18,11 @@ This tool relies on a number of open frameworks, mainly 960gs grid system & Amir
 
 ----
 ## طريقة الاستخدام
-ضع الكلمات التي تريد البحث عنها في خانة البحث ثم اضغط على زر "بناء روابط البحث". بعد الضغط، ستقوم الأداة بتجهيز الروابط المباشرة لنتائج البحث في المكتبات أعلاه، والمشار إليها بعلامات اسهم خضراء صغيرة. 
+ضع الكلمات التي تريد البحث عنها في خانة البحث ثم اضغط على زر "بناء روابط البحث". بعد الضغط، ستقوم الأداة بتجهيز الروابط المباشرة لنتائج البحث في المكتبات آدناه، والمشار إليها بعلامات اسهم خضراء صغيرة. 
 يمكنك فتح الروابط بالضغط عليها مباشرة بالماوس او ضغط زر الفأرة + زر COMMAND من الكيبورد لفتحها في نافذة جديدة.
 
  
-## المواقع
+## المكتبات
 جملون جرير كينوكونيا قرطبة مكتبة نور المنهل Good Reads الكتاب دار السلام المكتبة العربية صفوة الصفوة محل المنهل دار الساقي دار فكر نيل وفرات المجرودي
 
 ## قيد الإضافة
@@ -33,7 +33,7 @@ This tool relies on a number of open frameworks, mainly 960gs grid system & Amir
 
 
 ----
-![Tool Outline](https://github.com/MXAYMxF/ADATBOOKSEARCH/blob/master/code/img/ADATool.jpg)
+![Tool Outline](https://github.com/MXAYMxF/ADATBOOKSEARCH/blob/master/code/img/ADATool.jpg =250x400)
 ## jQuery functions: 
 This outlines the jQuery functions, key conditions and variables that were used to make this thing possible. 
 
