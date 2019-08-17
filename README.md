@@ -3,14 +3,15 @@ ADAT BOOK SEARCH
 
 Created by @MRMMHD. See the official github site for more info.
 
-Unzip the file structure into your folders and you will be able to use the tool immediately. To edit the html, open index.html and to edit the styles use your favorite browser's inspector to identify the css style sheet where the selector you want to modify is.
+Unzip the file structure into your folders and you will be able to use the tool immediately. 
 
-----------------------------------------------------------------------------
-
+----
 Thank you for downloading the ADAT Book Search Tool. I hope it helps to streamline your searching nightmares for arabic books and kickstart your 
 web scripting fantasies. Enclosed in the bundle are script documentation and user guides.
 
 This tool relies on a number of open frameworks, mainly 960gs grid system & Amiri + Scheherezad open fonts that were used for UI. This in addition to jQuery JS library. 
+
+----------------------------------------------------------------------------
 
 ## الهدف من أداة البحث المذهلة
 يتطلب البحث عن الكتاب العربي في المكتبات العربية الدخول الى العديد من المواقع وتكرار عملية الكتابة والبحث في كل موقع على حدة، ناهيك عن نسيان بعض المواقع وتغير مسمياتها وعناوينها. ان الغرض من اداة البحث هذه هو تسهيل الوصول الى كافة المواقع المكتبات التي اعتدت على البحث عن الكتب العربية فيها بحيث ادخل كلمة البحث مرة واحدة في خانة البحث ثم اضغط على روابط المكتبات للاطلاع على نواتج البحث مباشرة
@@ -18,11 +19,11 @@ This tool relies on a number of open frameworks, mainly 960gs grid system & Amir
 
 ----
 ## طريقة الاستخدام
-ضع الكلمات التي تريد البحث عنها في خانة البحث ثم اضغط على زر "بناء روابط البحث". بعد الضغط، ستقوم الأداة بتجهيز الروابط المباشرة لنتائج البحث في المكتبات أعلاه، والمشار إليها بعلامات اسهم خضراء صغيرة. 
+ضع الكلمات التي تريد البحث عنها في خانة البحث ثم اضغط على زر "بناء روابط البحث". بعد الضغط، ستقوم الأداة بتجهيز الروابط المباشرة لنتائج البحث في المكتبات آدناه، والمشار إليها بعلامات اسهم خضراء صغيرة. 
 يمكنك فتح الروابط بالضغط عليها مباشرة بالماوس او ضغط زر الفأرة + زر COMMAND من الكيبورد لفتحها في نافذة جديدة.
 
  
-## المواقع
+## المكتبات
 جملون جرير كينوكونيا قرطبة مكتبة نور المنهل Good Reads الكتاب دار السلام المكتبة العربية صفوة الصفوة محل المنهل دار الساقي دار فكر نيل وفرات المجرودي
 
 ## قيد الإضافة
@@ -33,11 +34,12 @@ This tool relies on a number of open frameworks, mainly 960gs grid system & Amir
 
 
 ----
-![Tool Outline](https://github.com/MXAYMxF/ADATBOOKSEARCH/blob/master/code/img/ADATool.jpg)
+<img src="https://github.com/MXAYMxF/ADATBOOKSEARCH/blob/master/code/img/ADATool.jpg" alt="Tool" width="350"/>
+
 ## jQuery functions: 
 This outlines the jQuery functions, key conditions and variables that were used to make this thing possible. 
 
-##JQuery used functions & APIs
+### Functions & APIs
 - `$.click()`	:	click event of `'Qbtn'` button that starts the process
 - `$.keyup()`	:	to respond to the `'return'` key when entering using the keyboard - it hits 'click' of `'Qbtn'`
 - `$.each()`	:	while loop to iterate the lists `<li>` 
@@ -49,16 +51,16 @@ This outlines the jQuery functions, key conditions and variables that were used 
 - `$.attr()`	: 	to modify and/or find the attributes of `<li>` and `<a>` tags; e.g. `'href'` attribute
 - `$.replace()`	:	to replace the keywords with `'Q'` value
 
-##Conditions
+### Conditions
 - `$('a[href*="+temp+"]')`	:	find condition where attribute equals `temp`
 - `$('li > :checked + a')`	: 	find condition of anchor tags `<a>` within a list `<li>` with only `:checked` inputs
 
-##JavaScript
+### JavaScript
 - `decodeURI()`	: 	method to decode Unicode uri into %20 characters
 - `decodeURIComponent()`	:	same
 - `encodeURI()	`:
 
-##Variables & Acronyms
+### Variables & Acronyms
 - `'Q'`	:	is the input where the user's Query will go
 - `'Qbtn'`	: is the button that the user clicks to start processing the input query
 
@@ -78,7 +80,7 @@ The steps in Psuedocode are as follows:
 > 4. `Start processing all URLs under LI  `
 > 5. `Show the user that URLs has been updated by showing the Guide span  `
 
-### Known Bugs & Issues
+## Known Bugs & Issues
 - Entering short characters twice will cause issues due to while loops. To reproduce error, try entering 's' and then entering 'ss'. Open
 - Entering words with a space will work once, the second time it will stop. I basically auto reload the full page if this happens. Try/catch failed so that was a quick work-around.
 - Some websites like Neel Wa Furat doesn't process input properly due to Javascript Unicode and Address locator restrictions/limitations. I tried to use URI encoding/decoding to resolve it with no success. Issue parked for later.
