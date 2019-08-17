@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<!-- <meta http-equiv="refresh" content="120"> -->
+<meta name="description" content="books arabic search tool كتب أداة البحث العربية">
+<meta name="keywords" content="search,books,arabic,best, بحث ,الكتب ,العربية، ,أفضل">
+
+
+<!-- 
+                                                                                                           
+               ,,                 
+             `7MM           mm    
+               MM           MM    
+ ,6"Yb.   ,M""bMM   ,6"Yb.mmMMmm  
+8)   MM ,AP    MM  8)   MM  MM    
+ ,pm9MM 8MI    MM   ,pm9MM  MM    
+8M   MM `Mb    MM  8M   MM  MM    
+`Moo9^Yo.`Wbmd"MML.`Moo9^Yo.`Mbmo
+
+
+Tool Built By @MrmMhd August 2019 --
+
+--->
+<title>أداة البحث المذهلة لمواقع المكتبات العربية
+</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri:400,400italic,700">
+	<link href="https://fonts.googleapis.com/css?family=Scheherazade&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset_rtl.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+	<header>  
+		<div class="container_12">
+
+		<h1>أداة البحث المذهلة لمواقع المكتبات العربية</h1>
+	</div>
+		 <div class="clear"></div>
+
+ </header>
+
+<div class="khaki">
+	<div class="container_12 main">
+	 <div class="grid_12" id="searchbox">
+		 <input  id="Q" type="text" name="query" placeholder="أدخل كلمات البحث"> 
+		<button id="Qbtn"> 
+			بناء روابط البحث	
+		 </button>
+		 <!-- <button type="clear">reset</button> -->
+		 <h6 id="try">
+		 	جرب: <a href="#" id="trythis" >الأغاني</a>
+		 </h6>
+		 <span class="hidden">
+			<img src="img/go.png" width="16" alt="Go!">
+		</span>
+	 </div>
+	</div>
+</div>
+	<div class="clear"></div>
+
+<div class="white">
+	<div class="container_12">
+
+	
+
+		<div class="grid_12" id="control">
+			 <h6 id="repeat">&nbsp;
+
+			 <!-- Give people the flexibility to repeat a previous search -->
+		 	<!-- جرب: <a href="#" id="trythis" value="الأغاني">الأغاني</a> -->
+		 	<!-- <a href="#" id="trythis" value="again">again</a> -->
+		 </h6>
+		<!-- 	<div>
+				<span id="cur"></span>
+				<span id="prev"> </span>
+	
+			</div>  -->
+			<!--
+			<button id="selectall">S E L E C T A L L</button>	
+			<button id="selectnone">S ELE CT N NONE</button>
+			<button type="submif"id="openurl">O P E N </button>
+			--->
+		</div>
+
+		 <div class="spinner"> 
+		 	<img src="img/spinner.gif" width="20" style="text-align: center; float: right; padding-right: 50px; display: block;" alt="loading...">
+		 </div>
+
+		 <div class="grid_12" id="list">
+		<h1>:المواقع</h1>
+			<ul class="qlist" dir="rtl">
+				<li class="active "><input type="checkbox" name="jamalon" class="qurls"><a href="https://jamalon.com/en/catalogsearch/result/?q=Test" class="jamalon">جملون</a>
+				 <!-- <p>جملون هو أكبر متجر عربي في منطقة الشرق الأوسط، يحتوي على أكثر من 9.5 مليون كتاب عربي وإنجليزي، كتابك لِبابك أينما كنت. </p> -->
+					</li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://www.jarir.com/sa-en/catalogsearch/result/?order=priority&dir=asc&q=Test
+				">جرير</a> </li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://uae.kinokuniya.com/products?utf8=%E2%9C%93&is_searching=true&restrictBy%5Bavailable_only%5D=1&taxon=&keywords=Test
+				">كينوكونيا</a></li>
+
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="http://www.qrtopa.com/search?q=Test
+				">قرطبة</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://www.noor-book.com/?search_for=Test
+				">مكتبة نور</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://platform.almanhal.com/Search/Result?q=Test
+				">المنهل</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://www.goodreads.com/search?utf8=%E2%9C%93&q=Test&search_type=books
+				">Good Reads</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://www.alkitab.com/t-search.html?q=Test
+				"> الكتاب</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="http://www.daralsalam.com/ar/Books?ReArrange=1&Depart=0&Depart=0&SearchTxt=Test
+				">دار السلام</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://www.arabicbookshop.net/main/catalogueFilter.asp?type=SEARCH&sort=6&options=2&keyword=Test&keywordarabic=&Submit=Go
+				">المكتبة  العربية</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://www.sifatusafwa.com/en/search?controller=search&orderby=position&orderway=desc&search_query=Test&submit_search=
+				">صفوة الصفوة</a></li>
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://store.almanhal.com/catalogsearch/result/?category_id=2&q=Test
+				">محل المنهل</a></li>
+				<li class="active "><input type="checkbox" name="url" class="qurls"><a href="https://www.alsaqibookshop.com/search?adv=false&cid=0&mid=0&vid=0&q=Test&sid=false&isc=true
+				">دار الساقي</a></li>
+
+				<li class="active "><input type="checkbox" name="url" class="qurls"><a href="https://darfikr.com/products?search_api_views_fulltext=Test
+				">دار فكر</a></li>
+
+				<li class="active"><input type="checkbox" name="url" class="qurls">
+				<a href="https://www.neelwafurat.com/locate.aspx?search=books&entry=Test&Mode=0
+				">نيل وفرات</a>
+
+				</li> 
+				
+				<li class="active"><input type="checkbox" name="url" class="qurls"><a href="https://magrudy.com/search/?q=Test
+				">المجرودي</a></li>
+			</ul>
+
+		</div>
+		<!---->
+		<div class="grid_6">
+			<p>
+				
+			<span id="guide"> 
+				الروابط أعلاه جاهزة للبحث عن: 
+
+				<span id="cur"></span>
+			 </span>
+
+			</p>
+
+				
+
+		</div>
+
+	<div class="grid_6" >
+	
+
+	</div>
+
+
+</div>
+
+
+<div class="clear"></div>
+
+<div class="clear"></div>
+</div>
+
+<div class="beige">
+  <div class="container_12">
+
+
+	<div id="res">
+
+		<div class="grid_6" >
+			  <h2>
+		الهدف من أداة البحث المذهلة
+		  </h2>
+		      <p>
+		يتطلب البحث عن الكتاب العربي في المكتبات العربية الدخول الى العديد من المواقع وتكرار عملية الكتابة والبحث في كل موقع على حدة، ناهيك عن نسيان بعض المواقع وتغير مسمياتها وعناوينها. ان الغرض من اداة البحث هذه هو تسهيل الوصول الى كافة المواقع المكتبات التي اعتدت على البحث عن الكتب العربية فيها بحيث ادخل كلمة البحث مرة واحدة في خانة البحث ثم اضغط على روابط المكتبات للاطلاع على نواتج البحث مباشرة.
+		      </p>
+
+		</div>
+
+
+		<div class="grid_6" >
+			  <h2>
+		طريقة الاستخدام
+
+		  </h2>
+		      <p>
+ضع الكلمات التي تريد البحث عنها  في خانة البحث ثم اضغط على زر "بناء روابط البحث". بعد الضغط، ستقوم الأداة بتجهيز الروابط المباشرة لنتائج البحث في المكتبات أعلاه، والمشار إليها بعلامات اسهم خضراء صغيرة.
+<br>
+ يمكنك فتح الروابط بالضغط عليها مباشرة بالماوس او ضغط زر الفأرة + زر <span id="key">CTRL</span> من الكيبورد لفتحها في نافذة جديدة.
+
+</p>
+		</div>
+		<div class="clear"></div>
+		<div class="clear"></div>
+
+	</div>
+		
+	
+  </div>
+
+
+</div>
+
+<!-- 
+
+ ___  __   __  ___  ___  __  
+|__  /  \ /  \  |  |__  |__) 
+|    \__/ \__/  |  |___ |  \ 
+                             
+
+ -->
+<footer class="tba">
+<div class="container_12">
+
+<div class="grid_6" >
+	  <h4>
+		قيد الإضافة
+
+	  </h4>
+   	<ul class="foot" >
+   		<!-- TO DO
+___  __      __   __     
+ |  /  \    |  \ /  \    
+ |  \__/    |__/ \__/    
+                         
+-->
+
+
+		 
+	 	<li> مكتبة المصطفى</li>
+		 <!-- https://www.al-mostafa.com/search1.php searchbox name:  --> 
+		<li>دار الكتب </li>
+		<!-- https://books.tcaabudhabi.ae/ar/external/pages/booklist.aspx?Search=%d8%a7%d9%84%d8%a7%d8%ba%d8%a7%d9%86%d9%8a -->
+		<!-- https://library.dctabudhabi.ae/multisearch?bentoq=%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A&catalog=bento -->
+		<li>مجامع اللغة العربية</li>
+		<!-- http://www.alashj.ae/?s=%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A -->
+		<li>المجموعات العربية على الانترنِت</li>
+		<!-- http://dlib.nyu.edu/aco/about/ -->
+	 
+		<li>مكتبة الكونغرس</li>
+		<!-- https://www.wdl.org/ar/search/?q=%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A -->
+
+		<li>المكتبة الرقمية العربية</li>
+		<!-- http://www.kadl.sa/Search.aspx?search=%d8%a7%d9%84%d8%a3%d8%ba%d8%a7%d9%86%d9%8a -->
+		<li>القرية الإلكترونية</li>
+		<!-- http://www.electronicvillage.org/mohammedsuwaidi_searchallresults.php -->
+		<li>الوراق</li>
+		<!-- http://www.alwaraq.net/Core/SearchServlet/searchall -->
+		<li>هنداوي</li>
+		<!-- https://www.hindawi.org/search/keyword/test/ -->
+		<li>مكتبة جامعة ييل</li>
+		<!-- http://search.library.yale.edu/quicksearch?q=%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A&commit= -->
+		<li>
+		الجامعة الاسلامية في غزة</li>
+		<!-- https://library.iugaza.edu.ps/search_library.aspx?s=%d8%a7%d9%84%d8%a7%d8%ba%d8%a7%d9%86%d9%8a -->
+		<li>سوق عكاظ</li>
+		<!-- http://www.sooqukaz.com/index.php/%D8%A7%D9%84%D8%A8%D8%AD%D8%AB?searchword=Test&searchphrase=all -->
+		<li>
+			مكتبة المغرب للكتب العربية
+		</li>
+		<!-- http://www.ektab.com/search/content/Test/ -->
+		<li>شبكة العربية للأبحاث والنشر </li>
+		<!-- https://www.arabiyanetwork.com/?product_cat=0&s=Test&post_type=product -->
+		<li>انطوان</li>
+		<!-- https://www.antoineonline.com/listing.aspx?q=%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A&type=0 -->
+		<li>رفي</li>
+		<!-- http://raffy.me/search/filter -->
+		<li>
+		كتبي
+		</li>
+		<!-- https://kotobi.com/shop/ar/search?q=%D8%A7%D9%84%D8%A7%D8%BA%D8%A7%D9%86%D9%8A -->
+		<!-- https://www.google.com/search?tbm=bks&q=test&oq=%D9%84%D8%A5%D8%AB%D8%B3%D9%81 -->
+		 <!-- https://books.tcaabudhabi.ae/ar/external/pages/booklist.aspx?Search=%d8%a7%d9%84%d8%a7%d8%ba%d8%a7%d9%86%d9%8a -->
+		</ul>
+
+		</div>
+
+	<div class="grid_6" >
+		  <h4>
+
+	حقوق الاستخدام والتطوير
+  		</h4>
+	      <p>
+	      	إذا كنت مطور وتود الحصول على نسخة من هذه الأداة يمكنك الحصول على كامل كود المصدر من خلال GitHub
+	 الأداة مرخصة برخصة MIT  التي يمكنك الاطلاع على تفاصيلها في الموقع.
+	صنع الأداة 
+
+	<a href="http://twitter.com/MrMMhd">MrMMhd@</a>
+
+	      </p>
+
+	</div>
+
+ <div class="clear"></div>
+
+<div class="grid_12" id="endgame"> 
+
+<p>
+	Made possible with  
+<a href="http://960.gs/#">960.gs</a> and 
+<a href="http://sublimetext.com">Sublime Text</a> editor. Completely unvalidated 
+<a href="https://www.w3.org/TR/html52/">HTML5</a> & 
+<a href="https://www.w3.org/standards/webdesign/htmlcss">CSS3</a>. Survived 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a> with 
+<a href="http://jquery.com">JQuery 3.4.1</a>
+and the web using 
+<a href="http://stackoverflow.com"> Stackoverflow</a> and  
+<a href="http://fonts.google.com">Google Fonts</a>. Powered by 
+			<a target="_blank" href="https://www.neonmobility.com">Neon Mobility </a> Team. Follow us on Instagram
+			<a target="_blank" href="https://instagram.com/neonmobility/">here</a>. 
+</p>
+</div>
+
+</div>
+
+<div class="clear"></div>
+	</footer>
+
+
+<script>
+
+	$("#openurl").click( function(evt) {
+ 	 $('li > :checked + a').each(function(i, el) {
+         console.log("opening... "+el.getAttribute('href'));
+         console.log("decoding... "+el.getAttribute('href'));
+        var uri = el.getAttribute('href');
+        var res = decodeURI(uri);
+        console.log(res);   
+        console.log(decodeURIComponent(uri));   
+         window.open(decodeURIComponent(uri));
+
+	  });
+	});
+			
+
+	$("#selectall").click (function (){
+
+            $(" INPUT[type='checkbox']").attr('checked', true);
+            return false;
+    		
+	});
+		$("#selectnone").click (function (){
+
+            $(" INPUT[type='checkbox']").attr('checked', false);
+            return false;
+	});
+
+        $(document).ready(function () {
+        $('input.qurls').hide(); //feature under development
+        $('.hidden').hide();
+        $('#guide').hide();
+        // $('.spinner').hide();
+        $('.spinner').css("display","none");
+        $('li ').css("display","inline");
+
+        if (navigator.userAgent.indexOf('Mac') != -1) {
+ 		 $("#key").text("COMMAND");
+		} else {
+ 		 $("#key").text("CTRL");
+		}
+    });
+
+/**
+		MAIN SCRIPT FOR PROCESSING URLS
+**/
+
+$("#Qbtn").click( function(){
+
+//put in the input's current store 'cur' . (data) the current input's value
+$("#Q").data('cur', ($("#Q").val()));	
+
+if ( $.trim($("#Q").val()) != ""){	// avoid empty search queries
+
+$("#guide").show();
+
+
+
+
+	if ( $("#Q").data('prev') == null ){ //the first time this is run: 
+
+		 // $("#cur").text("prev input is null and current stored is: "+ $("#Q").data('cur') +"while current value is"+$("#Q").val()  ); //div to show me
+ 	
+ 	//the following span is placed inside $(#guide) span
+ 	$("#cur").text($("#Q").data('cur') );
+
+	
+		/**	Here comes logic to traverse each LI, find the Test value in each href, replace it with input value **/
+
+		$( ' li ').each (function() {
+			$('a[href*="Test"]').each( function(){  
+		 		var oldUrl  = $(this).attr("href"); // Get current url          
+		        var newUrl = oldUrl.replace("Test",  $("#Q").data('cur')); // Create new url
+		        $(this).attr("href", newUrl); // Set href value
+		        $ (this).append($(".hidden").html()).hide().fadeIn(600);
+		        
+			});
+		});
+
+		/** END of FIRST LI Logic and we will update the stored value for the 2nd run *****/
+		/** START SECOND TIME Logic if Test value is no longer in the hrefs of LI **/
+		$("#Q").data('prev', $("#Q").val());	//add prev value
+
+	} else { //this is not the first time it runs:
+
+		//show me the prev	
+		// $("#prev").text ("input is not null, it was "+$("#Q").data('prev')+" and new input is: "+$("#Q").data('cur'));
+
+		var temp = $("#Q").data('prev'); // grab the stored value
+ 		// $("#cur").text($("#Q").data('cur') );
+
+		/**	Here comes logic **/
+		//**. The try and catch statements are to hadnle multiword search terms that could not be passed to the condition $('a[href*='+temp+']')//
+
+		$( ' li ').each (function() {
+			try{
+			  console.log("TRY statement")
+
+			  $('a[href*='+temp+']').each( function(){  //identify its location in the urls
+			  var oldUrl  = $(this).attr("href"); // Get current url          
+			         var newUrl = oldUrl.replace( $("#Q").data('prev'),  $("#Q").data('cur')); // Create new url with stored value replaced by new input text
+			         $(this).attr("href", newUrl); // Set href value 
+			  });
+			} catch (error) {
+				  console.log("Error has been handled")
+
+			} finally {
+				 console.log("Error is being handled")
+			        window.onerror = function() {
+ 					   location.reload();
+					}
+
+				var encodedQ = encodeURI(temp);
+				  $('a[href*='+encodedQ+']').each( function(){  //identify its location in the urls
+			  		var oldUrl  = $(this).attr("href"); // Get current url          
+			        var newUrl = oldUrl.replace( $("#Q").data('prev'),  $("#Q").data('cur')); // Create new url with stored value replaced by new input text
+			        $(this).attr("href", newUrl); // Set href value 
+
+			     });
+
+			}
+		});
+		/** END of LI Logic **/
+
+		$("#Q").data('prev', $("#Q").val());	//update prev value
+	}
+}
+
+
+});
+  
+
+//if they wants to test the tool
+$("#trythis").click(function(){
+	$("#Q").val($("#trythis").text());
+	$("#Qbtn").click();
+
+});
+
+//This is to enable the return key response
+$("#Q").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Qbtn").click();
+    }
+});
+</script>
+<!--
+
+Tool Built By @MrmMhd August 2019 --
+
+Open source libs & Free resources used: 
+960grid system
+Javascript
+JQuery 3.4.1
+Sublime Text
+BiDi Plug In
+Tested on Webkit and Moz only. IE users its 2019. 
+HTML5
+CSS3
+Amiri font
+Scheherezad font
+
+-->
+</body>
+</html>
