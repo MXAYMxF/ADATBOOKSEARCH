@@ -33,7 +33,7 @@ This tool relies on a number of open frameworks, mainly 960gs grid system & Amir
 
 
 ----
-![Tool Outline](file:///ADATool.jpg "How it works")
+![Tool Outline](https://github.com/MXAYMxF/ADATBOOKSEARCH/blob/master/code/img/ADATool.jpg)
 ### jQuery Functions on page: 
 This outlines the jQuery functions, key conditions and variables that were used to make this thing possible. 
 
